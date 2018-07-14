@@ -1,0 +1,8 @@
+<p>Kdybych potřeboval url tak to musím získat z srealit, ale na to nemám přístup,<br>
+ podle seo id bych z databáze našel o jaký typ se jedná a mohl bych bytvořit URL.
+</p>
+<% @vysledek["_embedded"]["estates"].each do |nemovitost| %>
+<h4><%=nemovitost["locality"]%></h4>
+<img src="<%=nemovitost["_links"]["images"][0]["href"]%>">
+
+<% end %>
